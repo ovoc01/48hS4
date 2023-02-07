@@ -33,4 +33,5 @@ class Welcome extends CI_Controller {
     public function amado(){
         $this->load->view('/amado-master/index.php');
     }
+
 }
