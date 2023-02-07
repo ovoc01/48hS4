@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="index.php"/>
         <link rel="next" title="The MIT License (MIT)" href="license.html"/>
         <link rel="prev" title="Developer’s Certificate of Origin 1.1" href="DCO.html"/> 
 
@@ -217,7 +217,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         
-          <a href="index.html" class="fa fa-home"> CodeIgniter</a>
+          <a href="index.php" class="fa fa-home"> CodeIgniter</a>
         
         
 <div role="search">
@@ -397,7 +397,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">CodeIgniter</a>
+        <a href="index.php">CodeIgniter</a>
       </nav>
 
 
@@ -406,7 +406,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
+    <li><a href="index.php">Docs</a> &raquo;</li>
       
     <li>Change Log</li>
     <li class="wy-breadcrumbs-aside">
@@ -800,7 +800,7 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 </li>
 <li><a class="reference internal" href="helpers/file_helper.html"><em>File Helper</em></a> changes include:<ul>
 <li><a class="reference internal" href="helpers/path_helper.html#set_realpath" title="set_realpath"><tt class="xref php php-func docutils literal"><span class="pre">set_realpath()</span></tt></a> can now also handle file paths as opposed to just directories.</li>
-<li>Added an optional paramater to <a class="reference internal" href="helpers/file_helper.html#delete_files" title="delete_files"><tt class="xref php php-func docutils literal"><span class="pre">delete_files()</span></tt></a> to enable it to skip deleting files such as <em>.htaccess</em> and <em>index.html</em>.</li>
+<li>Added an optional paramater to <a class="reference internal" href="helpers/file_helper.html#delete_files" title="delete_files"><tt class="xref php php-func docutils literal"><span class="pre">delete_files()</span></tt></a> to enable it to skip deleting files such as <em>.htaccess</em> and <em>index.php</em>.</li>
 <li>Deprecated function <tt class="docutils literal"><span class="pre">read_file()</span></tt> - it&#8217;s just an alias for PHP&#8217;s native <tt class="docutils literal"><span class="pre">file_get_contents()</span></tt>.</li>
 </ul>
 </li>
@@ -1306,7 +1306,8 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 <li>Fixed a bug in <a class="reference internal" href="libraries/loader.html"><em>Loader Library</em></a> method <tt class="docutils literal"><span class="pre">library()</span></tt> where some PHP versions wouldn&#8217;t execute the class constructor.</li>
 <li>Fixed a bug (#88) - An unexisting property was used for configuration of the Memcache cache driver.</li>
 <li>Fixed a bug (#14) - <a class="reference internal" href="database/forge.html"><em>Database Forge</em></a> method <tt class="docutils literal"><span class="pre">create_database()</span></tt> didn&#8217;t utilize the configured database character set.</li>
-<li>Fixed a bug (#23, #1238) - <a class="reference internal" href="database/caching.html"><em>Database Caching</em></a> method <tt class="docutils literal"><span class="pre">delete_all()</span></tt> used to delete .htaccess and index.html files, which is a potential security risk.</li>
+<li>Fixed a bug (#23, #1238) - <a class="reference internal" href="database/caching.html"><em>Database Caching</em></a> method <tt class="docutils literal"><span class="pre">delete_all()</span></tt> used to delete .htaccess and
+    index.php files, which is a potential security risk.</li>
 <li>Fixed a bug in <a class="reference internal" href="libraries/trackback.html"><em>Trackback Library</em></a> method <tt class="docutils literal"><span class="pre">validate_url()</span></tt> where it didn&#8217;t actually do anything, due to input not being passed by reference.</li>
 <li>Fixed a bug (#11, #183, #863) - <a class="reference internal" href="libraries/form_validation.html"><em>Form Validation Library</em></a> method <tt class="docutils literal"><span class="pre">_execute()</span></tt> silently continued to the next rule, if a rule method/function is not found.</li>
 <li>Fixed a bug (#122) - routed URI string was being reported incorrectly in sub-directories.</li>
