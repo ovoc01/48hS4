@@ -23,4 +23,13 @@ class traitement extends CI_Controller
         }
     }
 
+    public function signup(){
+        if(isset($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['password'])){
+            $nom = $_POST['nom']; $prenom = $_POST['prenom']; $mail = $_POST['email']; $mdp = $_POST['password'];
+            if($this->utilisateur_model->save($nom, $prenom, $mail, $mdp))
+                echo json_encode(0);
+            else echo json_encode(1);
+        }else echo json_encode(1);
+    }
+
 }

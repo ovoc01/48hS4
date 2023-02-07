@@ -22,20 +22,20 @@
                             <h2 class="text-center mb-4">Sign in</h2>
                             <form method="post" id="inscription">
                                 <div class="mb-5">
-                                    <input class="form-control" type="text" id="name-2" name="name" placeholder="Name...">
+                                    <input class="form-control" type="text" id="name-2" name="nom" placeholder="Nom...">
                                 </div>
                                 <div class="mb-5">
-                                    <input class="form-control" type="email" id="email-2" name="mail" placeholder="Email...">
+                                    <input class="form-control" type="text" id="name-2" name="prenom" placeholder="Prenom...">
                                 </div>
                                 <div class="mb-5">
-                                    <input class="form-control" type="password" id="name-2" name="password" placeholder="password...">
+                                    <input class="form-control" type="email" id="email-2" name="email" placeholder="Email...">
                                 </div>
                                 <div class="mb-5">
-                                    <input class="form-control" type="number" name="numero" placeholder="numero...">
+                                    <input class="form-control" type="password" id="name-2" name="password" placeholder="Mot de passe...">
                                 </div>
                                 <div>
 
-                                    <button class="btn btn-dark d-block w-100 mb-3" type="submit" onclick="signin()">
+                                    <button class="btn btn-dark d-block w-100 mb-3" type="submit" onclick="signup()">
                                         Signup
                                     </button>
                                 </div>
@@ -55,8 +55,8 @@
 
     </div>
 </body>
-<script type="text/javascript" src="./assets/javascript/crud.js"></script>
-<script type="text/javascript" src="./assets/javascript/bootstrap.js">
+<script type="text/javascript" src="<?=base_url()?>/assets/javascript/crud.js"></script>
+<script type="text/javascript" src="<?=base_url()?>/assets/javascript/bootstrap.js">
 
 </body>
 </html>

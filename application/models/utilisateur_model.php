@@ -40,8 +40,7 @@ class utilisateur_model extends CI_Model {
             'admin'=>$admin
         );
 
-        $this->db->insert('utilisateur',$data);
-        return $this->db->insert_id();
+        return $this->db->insert('utilisateur',$data);
     }
 }
 ?>
