@@ -20,13 +20,13 @@
 
                                 <input type="text" name="sign-up" value="signup" style="display: none">
                                 <div class="mb-5">
-                                    <input class="form-control" type="email" id="email-2" name="mail" placeholder="Email...">
+                                    <input class="form-control" type="email" id="email-2" value="admin@admin.admin" name="email" placeholder="Email...">
                                 </div>
                                 <div class="mb-5">
-                                    <input class="form-control" type="password" id="name-2" name="password" placeholder="password...">
+                                    <input class="form-control" type="password" id="name-2" value="admin" name="password" placeholder="password...">
                                 </div>
                                 <div>
-                                    <button class="btn btn-dark d-block w-100 mb-3" type="submit" onclick="signup()">
+                                    <button class="btn btn-dark d-block w-100 mb-3" type="submit" onclick="signin()">
                                         Signin
                                     </button>
                                 </div>
@@ -43,8 +43,8 @@
         </div>
     </section>
     </body>
-<script type="text/javascript" src="./assets/javascript/crud.js"></script>
-<script type="text/javascript" src="./assets/javascript/bootstrap.js">
+<script type="text/javascript" src="<?=base_url()?>/assets/javascript/crud.js"></script>
+<script type="text/javascript" src="<?=base_url()?>/assets/javascript/bootstrap.js">
 
 </script>
 </body>

@@ -74,10 +74,14 @@
         <nav class="amado-nav">
             <ul>
                 <li <?php if($active=="index") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/index">Home</a></li>
-                <li <?php if($active=="shop") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/shop">Shop</a></li>
+                <li <?php if($active=="shop") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/shop">Lister</a></li>
                 <li <?php if($active=="product-details") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/product-details">Product</a></li>
                 <li <?php if($active=="cart") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/cart">Cart</a></li>
                 <li <?php if($active=="checkout") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/checkout">Checkout</a></li>
+                <?php if($_SESSION['utilisateur']['admin']){ ?>
+                    <li <?php if($active=="checkout") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/checkout">Management</a></li>
+                <?php } ?>
+
             </ul>
         </nav>
         <!-- Button Group -->
