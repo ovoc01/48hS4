@@ -47,4 +47,9 @@ class objet_model extends CI_Model
         $query = $this->db->get_where('objet', 'idobjet', array('idobjet' => $idobjet));
         return $query->result_array();
     }
+
+    public function getMyObjet($idobjet) {
+        $query = $this->db->get_where('objet', 'idobjet', array('idobjet' => $idobjet));
+        return $query->result_array();
+    }
 }
