@@ -1,3 +1,7 @@
+<?php
+    $active = "index";
+    if(isset($service)) $active = $service;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +13,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Amado - Furniture Ecommerce Template | Home</title>
+    <title>Amado - Takalo | Home</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="<?=base_url()?>assets/img/core-img/favicon.ico">
@@ -69,11 +73,11 @@
         <!-- Amado Nav -->
         <nav class="amado-nav">
             <ul>
-                <li class="active"><a href="<?=base_url()?>home/service/index">Home</a></li>
-                <li><a href="<?=base_url()?>home/service/shop">Shop</a></li>
-                <li><a href="<?=base_url()?>home/service/product-details">Product</a></li>
-                <li><a href="<?=base_url()?>home/service/cart">Cart</a></li>
-                <li><a href="<?=base_url()?>home/service/checkout">Checkout</a></li>
+                <li <?php if($active=="index") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/index">Home</a></li>
+                <li <?php if($active=="shop") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/shop">Shop</a></li>
+                <li <?php if($active=="product-details") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/product-details">Product</a></li>
+                <li <?php if($active=="cart") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/cart">Cart</a></li>
+                <li <?php if($active=="checkout") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/checkout">Checkout</a></li>
             </ul>
         </nav>
         <!-- Button Group -->

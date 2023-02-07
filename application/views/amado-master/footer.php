@@ -1,3 +1,8 @@
+<?php
+$active = "index";
+if(isset($service)) $active = $service;
+?>
+
 <!-- ##### Footer Area Start ##### -->
 <footer class="footer_area clearfix">
     <div class="container">
@@ -7,7 +12,10 @@
                 <div class="single_widget_area">
                     <!-- Logo -->
                     <div class="footer-logo mr-50">
-                        <a href="<?=base_url()?>/home"><img src="<?=base_url()?>assets/img/core-img/logo2.png" alt=""></a>
+                        <p> Rodolphe - Fenitra - Misa<br>
+                            ETU001999 - ETU002663 - ETU002031
+                        </p>
+                        <p></p>
                     </div>
                     <!-- Copywrite Text -->
                     <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -24,19 +32,19 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                             <div class="collapse navbar-collapse" id="footerNavContent">
                                 <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active">
+                                    <li class="nav-item <?php if($active=="index") print("active");?>">
                                         <a class="nav-link" href="<?=base_url()?>/home">Home</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item <?php if($active=="shop") print("active");?>">
                                         <a class="nav-link" href="<?=base_url()?>home/service/shop">Shop</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item <?php if($active=="product-details") print("active");?>">
                                         <a class="nav-link" href="<?=base_url()?>home/service/product-details">Product</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item <?php if($active=="cart") print("active");?>">
                                         <a class="nav-link" href="<?=base_url()?>home/service/cart">Cart</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item <?php if($active=="checkout") print("active");?>">
                                         <a class="nav-link" href="<?=base_url()?>home/service/checkout">Checkout</a>
                                     </li>
                                 </ul>

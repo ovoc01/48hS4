@@ -1,5 +1,7 @@
 <!-- Mila importena ny header.php -->
-
+<?php
+    $this->load->model("");
+?>
         <!-- Product Catagories Area Start -->
         <div class="products-catagories-area clearfix">
             <div class="amado-pro-catagory clearfix">
