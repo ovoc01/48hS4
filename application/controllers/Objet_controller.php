@@ -40,4 +40,14 @@ class objet_controller extends CI_Controller
         $data['objets'] = $this->objet_model->getLastId();
         $this->load->view('list', $data);
     }
+
+    public function update() {
+        $idUtilisateur = $this->input->post('idUtilisateur');
+        $idCategorie = $this->input->post('idCategorie');
+        $prixEstimatif = $this->input->post('prix');
+        $titre = $this->input->post('titre');
+        $description = $this->input->post('description');
+
+
+    }
 }

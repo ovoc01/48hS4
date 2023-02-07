@@ -31,4 +31,15 @@ class objet_model extends CI_Model
         $query = $this->db->query("select * from objet order by idobjet desc limit 1");
         return $query->row_array();
     }
+
+    public function update($idObjet, $idUtilisateur, $prixEstime, $titre, $description, $idCategorie)
+    {
+        $this->db->set('idcategorie', $idCategorie);
+        $this->db->set('prixestimatif', $prixEstime);
+        $this->db->set('titre', $titre);
+        $this->db->set('description', $description);
+        $this->db->where('idutilisateur', $idUtilisateur);
+        $this->db->where('idobjet', $idObjet);
+        $this->db->update('objet');
+    }
 }

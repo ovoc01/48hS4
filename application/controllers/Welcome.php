@@ -22,10 +22,12 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-    public function login(){
+    public function login()
+    {
         $this->load->view('/sign/login');
     }
-    public function signup(){
+    public function signup()
+    {
         $this->load->view('/sign/signup');
     }
     public function amado(){
