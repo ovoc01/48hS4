@@ -35,8 +35,9 @@ class objet_controller extends CI_Controller
         $this->load->view('list');
     }
 
-    public function index()
-    {
-        $this->load->view('welcome_message');
+    public function lastId() {
+        $this->load->model('objet_model');
+        $data['objets'] = $this->objet_model->getLastId();
+        $this->load->view('list', $data);
     }
 }
