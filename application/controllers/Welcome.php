@@ -28,4 +28,7 @@ class Welcome extends CI_Controller {
     public function signup(){
         $this->load->view('/sign/signup');
     }
+    public function amado(){
+        $this->load->view('/amado-master/index.php');
+    }
 }
