@@ -29,6 +29,6 @@ class objet_model extends CI_Model
 
     public function getLastId() {
         $query = $this->db->query("select * from objet order by idobjet desc limit 1");
-        return $query->result_array();
+        return $query->row_array();
     }
 }
