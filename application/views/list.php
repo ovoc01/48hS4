@@ -1,5 +1,5 @@
 <?php
 
-    //foreach ($objets as $objet) { ?>
-        <?= $objets['idobjet'] ?>
-    <?//php }
+    foreach ($objets as $objet) { ?>
+        <?= $objet['idobjet'] ?>
+    <?php }
