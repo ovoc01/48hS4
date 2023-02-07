@@ -84,6 +84,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
-
+<div>
+    <form action="<?php echo site_url('controller/upload_photos'); ?>" method="post" enctype="multipart/form-data">
+        <input type="file" name="photos[]" multiple>
+        <input type="submit" value="Télécharger">
+    </form>
+</div>
 </body>
 </html>
