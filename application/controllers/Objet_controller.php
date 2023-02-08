@@ -104,4 +104,29 @@ class objet_controller extends CI_Controller
         $this->load->view('historique', $data);
     }
 
+    public function pourcentage($pourcentage) {
+        //$idobjet = $this->input->post('idobjet');
+        $this->load->model('objet_model');
+        $idobjet = 2;
+        $data['prixestimatif'] = $this->objet_model->getMyObjet($idobjet);
+        $prix = $data['prixestimatif'];
+        $pourcentMin = $prix+($prix*($pourcentage/100));
+        $pourcentMax = $prix-($prix*($pourcentage/100));
+        $data['specifiedObjet'] = $this->objet_model->getSpecifiedObjet($pourcentMin, $pourcentMax);
+        return $this->load->view('list', $data);
+    }
+
+    public function compare() {
+        $idobjet1 = $this->input->post('idobjet1');
+        $idobjet2 = $this->input->post('idobjet2');
+        $this->load->model('objet_controller');
+        $data['prixestimatif1'] = $this->objet_controller->getMyObjet($idobjet1);
+        $data['prixestimatif2'] = $this->objet_controller->getMyObjet($idobjet2);
+        $pourcentage[0] = ($data['prixestimatif1']/$data['prixestimatif2'])*100;
+        if($data['prixestimatif1'] < $data['prixestimatif2']) {
+            $pourcentage[0] = $pourcentage[0]*(-1);
+        }
+        $this->load->view('list',$pourcentage);
+    }
+
 }
