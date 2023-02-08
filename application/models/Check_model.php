@@ -12,8 +12,9 @@ class check_model extends CI_Model
         return $query->result_array();
     }
 
-    public function whereis($idCategorie, $name) {
-        $query = $this->db->get_where('objet', array('idcategorie' => $idCategorie, 'titre' => $name));
+    public function whereis($idCategorie, $titre) {
+        $sql = "select * from objet where idcategorie = ". $idCategorie ." and titre like '%" . $titre . "%'";
+        $query = $this->db->query($sql);
         return $query->result_array();
     }
 }
