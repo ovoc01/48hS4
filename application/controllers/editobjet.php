@@ -10,6 +10,7 @@ class editobjet extends CI_Controller
         else {
             $this->load->model("objet_model");
             $this->load->model("categorie_model");
+            $this->load->helper("takalo_helper");
         }
     }
 
@@ -26,10 +27,14 @@ class editobjet extends CI_Controller
     }
 
     function edit(){
-        if(isset($_POST['idobjet'])){
-            $titre = $_GET['titre']; $description = $_GET['description']; $idcategorie = $_GET['idcategorie'];
+        if(isset($_GET['titre'], $_GET['description'], $_GET['idcategorie'], $_GET['prixestimatif'])){
+            $titre = $_GET['titre']; $description = $_GET['description'];
+            $idobjet = $_GET['idobjet'];
+            $idcategorie = $_GET['idcategorie'];
             $prixestimatif = $_GET['prixestimatif'];
-            $this->objet_model->update($idobjet,$titre, $description, $idcategorie, $prixestimatif);
-        }
+            if($this->objet_model->update($idobjet,$titre, $description, $idcategorie, $prixestimatif)){
+                redirect("/home?editsuccess");
+            }else redirect("/home?editerror");
+        }else redirect("/home?editerror");
     }
 }
