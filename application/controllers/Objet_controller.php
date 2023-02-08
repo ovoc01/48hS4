@@ -30,9 +30,11 @@ class objet_controller extends CI_Controller
         $titre = $this->input->post('titre');
         $description = $this->input->post('description');
 
+        $data['prix'] = $this->input->post('prix');
+
         $this->load->model('Objet_model');
         $this->Objet_model->save($idUtilisateur, $idUtilisateur, $prixEstimatif, $titre, $description);
-        //$this->load->view('list');
+        //$this->load->view('list', $data);
     }
 
     public function lastId() {
@@ -42,12 +44,14 @@ class objet_controller extends CI_Controller
     }
 
     public function update() {
-        $idUtilisateur = $this->input->post('idUtilisateur');
-        $idCategorie = $this->input->post('idCategorie');
-        $prixEstimatif = $this->input->post('prix');
-        $titre = $this->input->post('titre');
-        $description = $this->input->post('description');
-
+        $idObjet = 1;
+        $idUtilisateur = $this->input->get('idUtilisateur');
+        $idCategorie = $this->input->get('idCategorie');
+        $prixEstimatif = $this->input->get('prix');
+        $titre = $this->input->get('titre');
+        $description = $this->input->get('description');
+        $this->load->model('Objet_model');
+        $this->Objet_model->update($idObjet, $idUtilisateur, $idCategorie, $prixEstimatif, $titre, $description);
     }
 
     /*public function upload()
