@@ -51,6 +51,7 @@ ALTER TABLE etat engine = InnoDB;
 create table statutechange(
     idstatutechange int auto_increment primary key ,
     idechange int references echange(idechange),
+
     date timestamp,    -- Date de lu changement d'etat (Acceptation / Refus / Annulation)
     idetat int references etat(idetat)
 );
