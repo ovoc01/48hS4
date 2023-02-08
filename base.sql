@@ -89,7 +89,6 @@ VALUES
   ('confirmé'),
   ('refusé');
 
-
 create table statutechange(
     idstatutechange int auto_increment primary key ,
     idechange int references echange(idechange),
@@ -106,3 +105,10 @@ VALUES
 
 -- utilisateur par defaut
 insert into utilisateur(nom, prenom, email, motdepasse, admin) value ('ad','min','admin@admin.admin','admin',true);
+
+create table historique(
+    idhistorique int auto_increment primary key,
+    idobjet int references objet(idobjet) ,
+    idutilisateur int references utilisateur(idutilisateur),
+    datedechange DATE
+);ALTER TABLE historique engine = InnoDB;
