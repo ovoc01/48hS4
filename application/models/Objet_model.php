@@ -38,6 +38,11 @@ class objet_model extends CI_Model
         return $query->result_array();
     }
 
+    public function update($idobjet,$titre, $description, $idcategorie, $prixestimatif){
+        $this->db->where('idobjet',$idobjet);
+        return $this->db->update('objet',array('titre'=>$titre, 'description'=>$description, 'prixestimatif'=>$prixestimatif, 'idcategorie'=>$idcategorie));
+    }
+
     public function getObjetById($idobjet){
         $query = $this->objetquery();
         $query = $query->where(array('idobjet' => $idobjet))->get();

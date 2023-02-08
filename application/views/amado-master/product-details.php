@@ -98,7 +98,16 @@
                                             </div>
                                         </div>
                                     </form>
-                            <?php }else echo "Voici un point de vu de votre objet" ?>
+                            <?php }else { ?>
+                                <form action="<?=base_url()?>editobjet" method="get">
+                                    <div class="row">
+                                        <input style="display: none" type="text" name="idobjet" value="<?=$objet['idobjet']?>">
+                                        <div class="cart-btn">
+                                            <button type="submit" value="submit" class="btn amado-btn w-100">Modifier</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            <?php } ?>
 
                         </div>
                     </div>

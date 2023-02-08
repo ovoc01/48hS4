@@ -36,6 +36,9 @@
                 <div class="search-content">
                     <form action="#" method="get">
                         <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                        <select>
+                            <option>categorie</option>
+                        </select>
                         <button type="submit"><img src="<?=base_url()?>assets/img/core-img/search.png" alt=""></button>
                     </form>
                 </div>
@@ -70,13 +73,16 @@
         <div class="logo">
             <a href="<?=base_url()?>home/service/index"><img src="<?=base_url()?>assets/img/core-img/logo.png" alt=""></a>
         </div>
+        <!-- Cart Menu -->
+        <div class="cart-fav-search">
+            <a href="#" class="search-nav"><img src="<?=base_url()?>assets/img/core-img/search.png" alt=""> Search</a>
+        </div>
         <!-- Amado Nav -->
         <nav class="amado-nav">
             <ul>
                 <li <?php if($active=="index") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/index">Home</a></li>
                 <li <?php if($active=="shop") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/shop">Lister</a></li>
                 <li <?php if($active=="propositions") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/propositions">Propositions</a></li>
-                <li <?php if($active=="product-details") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/product-details">Product</a></li>
                 <li <?php if($active=="cart") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/cart">Cart</a></li>
                 <li <?php if($active=="checkout") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/checkout">Checkout</a></li>
                 <?php if($_SESSION['utilisateur']['admin']){ ?>
@@ -90,12 +96,6 @@
         <div class="amado-btn-group mt-30 mb-100">
             <a href="<?=base_url()?>sign/logout" class="btn amado-btn mb-15">logout</a>
 
-        </div>
-        <!-- Cart Menu -->
-        <div class="cart-fav-search mb-100">
-            <a href="<?=base_url()?>home/service/cart" class="cart-nav"><img src="<?=base_url()?>assets/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
-            <a href="#" class="fav-nav"><img src="<?=base_url()?>assets/img/core-img/favorites.png" alt=""> Favourite</a>
-            <a href="#" class="search-nav"><img src="<?=base_url()?>assets/img/core-img/search.png" alt=""> Search</a>
         </div>
         <!-- Social Button -->
         <div class="social-info d-flex justify-content-between">
