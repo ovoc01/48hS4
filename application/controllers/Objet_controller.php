@@ -96,4 +96,12 @@ class objet_controller extends CI_Controller
         }
     }*/
 
+    public function historiques() {
+        //$idobjet = $this->input->post('idobjet');
+        $idobjet = 1;
+        $this->load->model('objet_model');
+        $data['historiques'] = $this->objet_model->gethistorique($idobjet);
+        $this->load->view('historique', $data);
+    }
+
 }

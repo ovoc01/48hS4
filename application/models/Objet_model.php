@@ -52,4 +52,9 @@ class objet_model extends CI_Model
         $query = $this->db->get_where('objet', 'idobjet', array('idobjet' => $idobjet));
         return $query->result_array();
     }
+
+    public function gethistorique($idobjet) {
+        $query = $this->db->query(sprintf('select historique.idobjet as idobjet, utilisateur.nom as nom, utilisateur.prenom as prenom, objet.titre as titre, objet.description as description, historique.datedechange as datedechange from historique join objet on historique.idobjet = objet.idobjet join utilisateur on utilisateur.idutilisateur = historique.idutilisateur where historique.idobjet = %s',$idobjet));
+        return $query->result_array();
+    }
 }

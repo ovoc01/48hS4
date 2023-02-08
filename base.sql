@@ -28,9 +28,6 @@ VALUES
   ('Livres'),
   ('Jouets');
 
-
-
-
 create table objet(
     idobjet int auto_increment primary key ,
     idutilisateur int references utilisateur(idutilisateur),
@@ -67,16 +64,11 @@ create table echange(
     idechange int auto_increment primary key not null ,
     idobjet1 int references objet(idobjet),
     idobjet2 int references objet(idobjet),
+    idutilisateur1 int ,
+    idutilisateur2 int ,
     date DATE  -- Date de la proposition
 );
 ALTER TABLE echange engine = InnoDB;
-INSERT INTO echange (idobjet1, idobjet2, date)
-VALUES
-  (1, 2, '2022-12-01'),
-  (3, 4, '2022-11-15'),
-  (2, 3, '2022-10-25'),
-  (1, 4, '2022-09-20');
-
 
 create table etat(
     idetat int auto_increment primary key,
