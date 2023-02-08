@@ -30,7 +30,9 @@ class Home extends CI_Controller
             $data = array();
             $data['service'] = $service;
             $data['categories'] = $this->categorie_model->getAllCategorie();
-            if(isset($_GET['idcategorie'], $_GET['idutilisateur'])){
+            if($service == 'propositions'){
+                $data['objets'] = $this->objet_model->getObjetProposition($_SESSION['utilisateur']['idutilisateur']);
+            }elseif(isset($_GET['idcategorie'], $_GET['idutilisateur'])){
                 $data['objets'] = $this->objet_model->getUserObjectByCategorie($_GET['idutilisateur'], $_GET['idcategorie']);
             }elseif(isset($_GET['idcategorie'])){
                 $data['objets'] = $this->objet_model->getByCategorie($_GET['idcategorie']);

@@ -1,6 +1,5 @@
 
 <div class="shop_sidebar_area">
-
     <?php if(isset($categories)) { ?>
     <!-- ##### Single Widget ##### -->
     <div class="widget catagory mb-50">

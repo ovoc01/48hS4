@@ -6,6 +6,19 @@ class objet_model extends CI_Model
     {
         parent::__construct();
     }
+
+    public function getObjetProposition($idutilisateur){
+        $this->load->model("echange_model");
+        $objets = $this->getAllObjet();
+        $val = array();
+        foreach ($objets as $objet){
+            if($this->echange_model->isInProposition($idutilisateur, $objet['idobjet'])){
+                $val[] = $objet;
+            }
+        }
+        return $val;
+    }
+
     public function objetquery(){
         return $query = $this->db->select('idobjet, objet.idcategorie idcategorie, prixestimatif, titre,
        utilisateur.idutilisateur idutilisateur, nom nomutilisateur, prenom, email, motdepasse, description,
@@ -66,7 +79,7 @@ class objet_model extends CI_Model
 
     public function getByCategorie($idcategorie){
         $query = $this->objetquery();
-        $query = $query->where(array('idcategorie' => $idcategorie))->get();
+        $query = $query->where(array('objet.idcategorie' => $idcategorie))->get();
         return $query->result_array();
     }
 }

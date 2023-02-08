@@ -45,7 +45,7 @@
                             <div class="product-meta-data">
                                 <div class="line"></div>
                                 <p class="product-price"><?=$objet['prixestimatif']?> Ar</p>
-                                <a href="product-details.php">
+                                <a>
                                     <h6><?=$objet['titre']?></h6>
                                 </a>
                                 <!-- Ratings & Review -->
@@ -70,11 +70,12 @@
                             </div>
 
                             <!-- Add to Cart Form -->
-                            <?php if($_SESSION['utilisateur']['idutilisateur']!=$objet['idutilisateur']){ ?>
-                                <form class="cart clearfix" method="post" action="">
+                            <?php if($_SESSION['utilisateur']['idutilisateur']!=$objet['idutilisateur'] and !$indemande and !$inproposition ){ ?>
+                                <form class="cart clearfix" method="post" action="<?=base_url("/echange")?>">
                                     <div class="cart-btn d-flex mb-50">
+                                        <input type="number" name="idobjet1" value="<?=$objet['idobjet']?>" style="display: none">
                                         <p>Vos objets</p>
-                                        <select id="country">
+                                        <select id="country" name="idobjet2">
                                             <?php foreach ($mine as $myobject){ ?>
                                                 <option value="<?=$myobject['idobjet']?>"><?=$myobject['titre']?></option>
                                             <?php } ?>
@@ -82,7 +83,22 @@
                                     </div>
                                     <button type="submit" name="addtocart" value="5" class="btn amado-btn">Proposer l'échange</button>
                                 </form>
-                            <?php } ?>
+                            <?php }elseif($indemande){ ?>
+                                <p style="color: black">Vous avez déjà envoyé une proposition</p>
+                            <?php }elseif($inproposition && isset($proposition)){?>
+                                    Un utilisateur veut echanger cet objet avec le <a class="text-decoration-underline" href="<?=base_url("detail?idobjet=".$proposition['idobjet1'])?>"><h6>votre</h6></a>
+                                    <form action="<?=base_url()?>echange/changestate" method="post">
+                                        <div class="row">
+                                            <input style="display: none" type="text" name="idechange" value="<?=$proposition['idechange']?>">
+                                            <div class="cart-btn col-lg-6">
+                                                <button type="submit" value="1" name="idetat" class="btn amado-btn w-100">Accepter</button>
+                                            </div>
+                                            <div class="cart-btn col-lg-6">
+                                                <button type="submit" value="2" name="idetat" class="btn amado-btn w-100">Refuser</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                            <?php }else echo "Voici un point de vu de votre objet" ?>
 
                         </div>
                     </div>

@@ -75,6 +75,7 @@
             <ul>
                 <li <?php if($active=="index") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/index">Home</a></li>
                 <li <?php if($active=="shop") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/shop">Lister</a></li>
+                <li <?php if($active=="propositions") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/propositions">Propositions</a></li>
                 <li <?php if($active=="product-details") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/product-details">Product</a></li>
                 <li <?php if($active=="cart") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/cart">Cart</a></li>
                 <li <?php if($active=="checkout") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/checkout">Checkout</a></li>
@@ -82,14 +83,13 @@
                     <li <?php if($active=="categoriemgr") print("class=\"active\"");?>><a href="<?=base_url()?>home/manage/addcategory">Add category</a></li>
                     <li <?php if($active=="categoriemgr") print("class=\"active\"");?>><a href="<?=base_url()?>home/manage/modifycategory?idcategorie=1">Modify category</a></li>
                 <?php } ?>
-                <li <?php if($active=="categoriemgr") print("class=\"active\"");?>><a href="<?=base_url()?>sign/logout">logout</a></li>
 
             </ul>
         </nav>
         <!-- Button Group -->
         <div class="amado-btn-group mt-30 mb-100">
-            <a href="#" class="btn amado-btn mb-15">%Discount%</a>
-            <a href="#" class="btn amado-btn active">New this week</a>
+            <a href="<?=base_url()?>sign/logout" class="btn amado-btn mb-15">logout</a>
+
         </div>
         <!-- Cart Menu -->
         <div class="cart-fav-search mb-100">
