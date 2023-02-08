@@ -10,4 +10,12 @@ class Check_Controller extends CI_Controller
         $data['categories'] = $this->check_model->getAllCategories();
         $this->load->view('search', $data);
     }
+
+    public function whereis() {
+        $name = $this->input->get('titre');
+        $idCategorie = $this->input->get('idCategorie');
+        $this->load->model('check_model');
+        $data['objets'] = $this->check_model->whereis($idCategorie, $name);
+        $this->load->view('result_search', $data);
+    }
 }
