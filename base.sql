@@ -112,3 +112,8 @@ create table historique(
     idutilisateur int references utilisateur(idutilisateur),
     datedechange DATE
 );ALTER TABLE historique engine = InnoDB;
+INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (1, 1, '2022-01-01');
+INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (2, 2, '2022-02-01');
+INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (3, 3, '2022-03-01');
+INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (4, 4, '2022-04-01');
+INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (5, 5, '2022-05-01');
