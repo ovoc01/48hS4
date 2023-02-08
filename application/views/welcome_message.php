@@ -91,14 +91,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </form>
 </div>
 <div>
-    <form method="post" action="objet_controller/insert">
+    <form method="get" action="objet_controller/update">
         <input type="number" name="idUtilisateur" value="1">
         <input type="number" name="idCategorie" value="1">
-        <input type="number" name="prix" value="25">
+        <input type="number" name="prix" value="35">
         <input type="text" name="titre" value="titre">
         <input type="text" name="description" value="description">
         <input type="submit" value="alefa">
     </form>
 </div>
+
 </body>
 </html>
