@@ -45,7 +45,6 @@ class Home extends CI_Controller
             $data['objets'] = $this->objet_model->getPictures($data['objets']);
             $data['utilisateurs']=$this->utilisateur_model->getAllUser();
             $this->load->view('template', $data);
-
     }
 
 

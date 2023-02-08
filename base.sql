@@ -69,3 +69,4 @@ insert into categorie(nomcategorie) values ('meuble'), ('decoration');
 -- premier objet
 insert into objet(idutilisateur, idcategorie, prixestimatif, titre, description)
 values(1, 1, 30000, 'modern chair', 'a pretty modern white chair !');
+insert into photo(idobjet, path) value (1, 'assets/img/product-img/product1.jpg');
