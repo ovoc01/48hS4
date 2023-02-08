@@ -8,25 +8,14 @@ create table utilisateur(
     email varchar(100) unique ,
     motdepasse varchar(50),
     admin boolean default false
-);ALTER TABLE utilisateur engine = InnoDB;
-INSERT INTO utilisateur (nom, prenom, email, motdepasse, admin)
-VALUES
-  ('Dupont', 'Jean', 'jean.dupont@example.com', 'motdepasse1', false),
-  ('Durand', 'Marie', 'marie.durand@example.com', 'motdepasse2', false),
-  ('Martin', 'Luc', 'luc.martin@example.com', 'motdepasse3', false),
-  ('Petit', 'Julie', 'julie.petit@example.com', 'motdepasse4', true);
-
+);
+ALTER TABLE utilisateur engine = InnoDB;
 
 create table categorie(
     idcategorie int auto_increment primary key ,
     nomcategorie varchar(50)
-);ALTER TABLE categorie engine = InnoDB;
-INSERT INTO categorie (nomcategorie)
-VALUES
-  ('Electronique'),
-  ('Vêtements'),
-  ('Livres'),
-  ('Jouets');
+);
+ALTER TABLE categorie engine = InnoDB;
 
 create table objet(
     idobjet int auto_increment primary key ,
@@ -35,15 +24,8 @@ create table objet(
     prixestimatif double,
     titre varchar(50),
     description text
-);ALTER TABLE objet engine = InnoDB;
-INSERT INTO objet (idutilisateur, idcategorie, prixestimatif, titre, description)
-VALUES
-  (1, 1, 199.99, 'Téléviseur', 'Téléviseur HD de 50 pouces'),
-  (2, 2, 49.99, 'Veste', 'Veste en cuir noir pour hommes'),
-  (3, 3, 19.99, 'Livre de cuisine', 'Livre de cuisine avec des recettes faciles et rapides'),
-  (4, 4, 29.99, 'Drone', 'Drone avec caméra HD et contrôle à distance');
-
-
+);
+ALTER TABLE objet engine = InnoDB;
 
 create table photo(
     idphoto int auto_increment primary key ,
@@ -51,22 +33,12 @@ create table photo(
     path varchar(200)
 );
 ALTER TABLE photo engine = InnoDB;
-INSERT INTO photo (idobjet, path)
-VALUES
-  (1, '/images/television.jpg'),
-  (2, '/images/jacket.jpg'),
-  (3, '/images/cookbook.jpg'),
-  (4, '/images/drone.jpg');
-
-
 
 create table echange(
     idechange int auto_increment primary key not null ,
     idobjet1 int references objet(idobjet),
     idobjet2 int references objet(idobjet),
-    idutilisateur1 int ,
-    idutilisateur2 int ,
-    date DATE  -- Date de la proposition
+    date timestamp  -- Date de la proposition
 );
 ALTER TABLE echange engine = InnoDB;
 
@@ -75,37 +47,24 @@ create table etat(
     etat varchar(20)
 );
 ALTER TABLE etat engine = InnoDB;
-INSERT INTO etat (etat)
-VALUES
-  ('en attente'),
-  ('confirmé'),
-  ('refusé');
 
 create table statutechange(
     idstatutechange int auto_increment primary key ,
     idechange int references echange(idechange),
-    date DATE,    -- Date de lu changement d'etat (Acceptation / Refus / Annulation)
+    date timestamp,    -- Date de lu changement d'etat (Acceptation / Refus / Annulation)
     idetat int references etat(idetat)
 );
-ALTER TABLE utilisateur engine = statutechange;
-INSERT INTO statutechange (idechange, date, idetat)
-VALUES
-  (1, '2022-01-01', 1),
-  (2, '2022-02-01', 2),
-  (3, '2022-03-01', 3);
+ALTER TABLE utilisateur engine = InnoDB;
 
 
 -- utilisateur par defaut
 insert into utilisateur(nom, prenom, email, motdepasse, admin) value ('ad','min','admin@admin.admin','admin',true);
 
-create table historique(
-    idhistorique int auto_increment primary key,
-    idobjet int references objet(idobjet) ,
-    idutilisateur int references utilisateur(idutilisateur),
-    datedechange DATE
-);ALTER TABLE historique engine = InnoDB;
-INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (1, 1, '2022-01-01');
-INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (2, 2, '2022-02-01');
-INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (3, 3, '2022-03-01');
-INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (4, 4, '2022-04-01');
-INSERT INTO historique (idobjet, idutilisateur, datedechange) VALUES (5, 5, '2022-05-01');
+
+-- categorie test
+insert into categorie(nomcategorie) values ('meuble'), ('decoration');
+
+
+-- premier objet
+insert into objet(idutilisateur, idcategorie, prixestimatif, titre, description)
+values(1, 1, 30000, 'modern chair', 'a pretty modern white chair !');

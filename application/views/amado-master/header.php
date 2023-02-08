@@ -34,10 +34,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="search-content">
-                    <form action="#" method="get">
-                        <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                        <select>
-                            <option>categorie</option>
+                    <form action="<?=$service?>" method="get">
+                        <input type="search" name="keyword" id="search" placeholder="Type your keyword...">
+                        <select name="searchcategorie">
+                            <?php foreach ($categories as $category) { ?>
+                                <option value="<?=$category['idcategorie']?>"><?=$category['nomcategorie']?></option>
+                            <?php } ?>
                         </select>
                         <button type="submit"><img src="<?=base_url()?>assets/img/core-img/search.png" alt=""></button>
                     </form>
@@ -83,8 +85,6 @@
                 <li <?php if($active=="index") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/index">Home</a></li>
                 <li <?php if($active=="shop") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/shop">Lister</a></li>
                 <li <?php if($active=="propositions") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/propositions">Propositions</a></li>
-                <li <?php if($active=="cart") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/cart">Cart</a></li>
-                <li <?php if($active=="checkout") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/checkout">Checkout</a></li>
                 <?php if($_SESSION['utilisateur']['admin']){ ?>
                     <li <?php if($active=="categoriemgr") print("class=\"active\"");?>><a href="<?=base_url()?>home/manage/addcategory">Add category</a></li>
                     <li <?php if($active=="categoriemgr") print("class=\"active\"");?>><a href="<?=base_url()?>home/manage/modifycategory?idcategorie=1">Modify category</a></li>
@@ -95,7 +95,7 @@
         <!-- Button Group -->
         <div class="amado-btn-group mt-30 mb-100">
             <a href="<?=base_url()?>sign/logout" class="btn amado-btn mb-15">logout</a>
-
+            <a href="<?=base_url()?>addobjet" class="btn amado-btn mb-15">ajouter objet</a>
         </div>
         <!-- Social Button -->
         <div class="social-info d-flex justify-content-between">

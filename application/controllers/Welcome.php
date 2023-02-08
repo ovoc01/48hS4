@@ -20,18 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('/sign/login');
 	}
-    public function login()
-    {
-        $this->load->view('/sign/login');
-    }
-    public function signup()
-    {
-        $this->load->view('/sign/signup');
-    }
-    public function amado(){
-        $this->load->view('/amado-master/index.php');
-    }
 
 }

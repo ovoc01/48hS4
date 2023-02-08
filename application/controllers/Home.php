@@ -38,7 +38,10 @@ class Home extends CI_Controller
                 $data['objets'] = $this->objet_model->getByCategorie($_GET['idcategorie']);
             }elseif (isset($_GET['idutilisateur'])){
                 $data['objets'] = $this->objet_model->getUtilisateurObjets($_GET['idutilisateur']);
+            }elseif(isset($_GET['searchcategorie'], $_GET['keyword'])){
+                $data['objets'] = $this->objet_model->whereis($_GET['searchcategorie'], $_GET['keyword']);
             }else $data['objets'] = $this->objet_model->getAllObjet();
+
             $data['objets'] = $this->objet_model->getPictures($data['objets']);
             $data['utilisateurs']=$this->utilisateur_model->getAllUser();
             $this->load->view('template', $data);
@@ -46,7 +49,7 @@ class Home extends CI_Controller
     }
 
 
-
+// pour le backoffice
     public function manage($service = null){
         if(isset($_SESSION['utilisateur'], $service)){
             $data = array();
