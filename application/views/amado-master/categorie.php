@@ -11,7 +11,7 @@
         <div class="catagories-menu">
             <ul>
                 <?php foreach($categories as $category){ ?>
-                <li><a href="#"><?=$category['nomcategorie']?></a></li>
+                <li><a href="<?=base_url()?>home/service/shop?idcategorie=<?=$category['idcategorie']?>"><?=$category['nomcategorie']?></a></li>
                 <?php } ?>
             </ul>
         </div>
@@ -28,7 +28,7 @@
         <div class="catagories-menu">
             <ul>
                 <?php foreach($utilisateurs as $utilisateur){ ?>
-                    <li><a href="#"><?=$utilisateur['nom']?></a></li>
+                    <li><a href="<?=base_url()?>home/service/shop?idutilisateur=<?=$utilisateur['idutilisateur']?>"><?=$utilisateur['nom']?></a></li>
                 <?php } ?>
             </ul>
         </div>

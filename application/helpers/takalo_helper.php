@@ -8,3 +8,9 @@ if( ! function_exists('checkLogIn')){
         return false;
     }
 }
+if(! function_exists('getpictures')){
+    function getpictures($idobjet){
+        $this->load->model('photo_model');
+
+    }
+}

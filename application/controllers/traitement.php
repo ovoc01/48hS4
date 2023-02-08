@@ -32,4 +32,32 @@ class traitement extends CI_Controller
         }else echo json_encode(1);
     }
 
+    public function addcategory(){
+        if(isset($_POST['nomcategory'])){
+            $nomcategorie = $_POST['nomcategory'];
+            if($this->categorie_model->save($nomcategorie))
+                echo json_encode(0);
+            else echo json_encode(1);
+        }else echo json_encode(1);
+    }
+
+    public function modifcategorie(){
+        if(isset($_POST['nomcategory'],$_POST['idcategory'])){
+            $nomcategorie = $_POST['nomcategory'];
+            $idcategorie = $_POST['idcategory'];
+            if($this->categorie_model->update($idcategorie, $nomcategorie)){
+                echo json_encode(0);
+            }else echo json_encode(1);
+        }else echo json_encode(1);
+    }
+
+    public function deletecategorie(){
+        if(isset($_POST['idcategory'])){
+            $idcategorie = $_POST['idcategory'];
+            if($this->categorie_model->delete($idcategorie))
+                echo json_encode(0);
+            else echo json_encode(1);
+        }else echo json_encode(1);
+    }
+
 }

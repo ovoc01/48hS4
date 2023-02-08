@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=base_url()?>>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?=base_url()?>/assets/css/bootstrap.min.css">
-    <title>Login</title>
+    <title>sign in</title>
 </head>
 <body>
     <section class="position-relative py-4 py-xl-5">
@@ -31,7 +31,7 @@
                                     </button>
                                 </div>
                             </form>
-                            <a href="<?=site_url()?>welcome/signup" style="text-decoration: none">
+                            <a href="<?=site_url()?>sign/signup" style="text-decoration: none">
                                 <button class="btn btn-dark d-block w-100">
                                     Signup
                                 </button>

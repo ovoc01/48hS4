@@ -79,8 +79,10 @@
                 <li <?php if($active=="cart") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/cart">Cart</a></li>
                 <li <?php if($active=="checkout") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/checkout">Checkout</a></li>
                 <?php if($_SESSION['utilisateur']['admin']){ ?>
-                    <li <?php if($active=="checkout") print("class=\"active\"");?>><a href="<?=base_url()?>home/service/checkout">Management</a></li>
+                    <li <?php if($active=="categoriemgr") print("class=\"active\"");?>><a href="<?=base_url()?>home/manage/addcategory">Add category</a></li>
+                    <li <?php if($active=="categoriemgr") print("class=\"active\"");?>><a href="<?=base_url()?>home/manage/modifycategory?idcategorie=1">Modify category</a></li>
                 <?php } ?>
+                <li <?php if($active=="categoriemgr") print("class=\"active\"");?>><a href="<?=base_url()?>sign/logout">logout</a></li>
 
             </ul>
         </nav>

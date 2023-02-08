@@ -9,6 +9,11 @@ class utilisateur_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function getUser($idutilisateur){
+        $query=$this->db->get_where('utilisateur',array('idutilisateur'=>$idutilisateur));
+        return $query->result_array();
+    }
+
     protected function getUserId($mail, $mdp){
         $query=$this->db->get_where('utilisateur',array('email'=> $mail, 'motdepasse'=>$mdp));
         return $query->result_array();

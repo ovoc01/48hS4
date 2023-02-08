@@ -8,8 +8,10 @@
 
                         <!-- Single Catagory -->
                         <div class="single-products-catagory clearfix">
-                            <a href="<?=base_url()?>home/service/shop">
-                                <img src="<?=base_url()?>assets/img/bg-img/1.jpg" alt="">
+                            <a href="<?=base_url()?>detail?idobjet=<?=$objet['idobjet']?>">
+                                <?php if(count($objet['photo'])>0){ ?>
+                                <img src="<?=base_url()?><?=$objet['photo'][0]['path']?>" alt="">
+                                <?php } ?>
                                 <!-- Hover Content -->
                                 <div class="hover-content">
                                     <div class="line"></div>

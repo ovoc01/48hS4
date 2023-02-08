@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=base_url()?>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?=base_url()?>/assets/css/bootstrap.min.css">
-    <title>login</title>
+    <title>sign up</title>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
                 <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4">
                     <div class="card mb-5">
                         <div class="card-body p-sm-5">
-                            <h2 class="text-center mb-4">Sign in</h2>
+                            <h2 class="text-center mb-4">Sign up</h2>
                             <form method="post" id="inscription">
                                 <div class="mb-5">
                                     <input class="form-control" type="text" id="name-2" name="nom" placeholder="Nom...">
@@ -41,7 +41,7 @@
                                 </div>
                             </form>
                             <b  class="text-center">already have an account ?</b>
-                            <a href="<?=site_url()?>welcome/login" style="text-decoration: none">
+                            <a href="<?=site_url()?>sign/login" style="text-decoration: none">
                                 <button class="btn btn-dark d-block w-100">
                                     Signin
                                 </button>

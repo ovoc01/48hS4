@@ -6,5 +6,10 @@ class photo_model extends CI_Model
         parent::__construct();
     }
 
+    public function getObjetsPhoto($idobjet){
+        $query = $this->db->get_where('photo',array('idobjet' => $idobjet));
+        return $query->result_array();
+    }
+
 
 }
