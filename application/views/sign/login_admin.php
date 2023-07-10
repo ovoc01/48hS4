@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Connection</title>
+  <title>Login - Admin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -89,10 +89,6 @@
                      <p class="text-danger"><?=$error?></p>
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit">Connection</button>
-                    </div>
-                    <div class="col-12">
-                      <p class="small mb-0">Vous êtes nouveau? <a href="<?=site_url("utilisateur/inscription")?>">Créez un compte</a></p>
-                      <p class="small mb-0"><a href="<?=site_url("admin/")?>">Administrateur?</a></p>
                     </div>
                   </form>
 
