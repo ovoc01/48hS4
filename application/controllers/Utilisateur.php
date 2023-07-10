@@ -19,6 +19,8 @@ class Utilisateur extends CI_Controller{
     public function inscription(){
         $this->load->view('sign/inscription');
     }
+
+
     
     public function login(){
         if(!isset($_POST['email'],$_POST['password'])){
@@ -35,5 +37,7 @@ class Utilisateur extends CI_Controller{
     public function logout(){
         //TODO
     }
+
+
 
 }

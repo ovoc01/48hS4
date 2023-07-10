@@ -7,4 +7,9 @@ class Welcome extends CI_Controller{
         parent::__construct();
     }
 
+
+    public function index(){
+         $this->load->view('user/home');
+    }
+
  }
