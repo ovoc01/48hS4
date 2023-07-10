@@ -1,3 +1,9 @@
+<?php
+    $error = "";
+    if(isset($_GET["error"])){
+      $error = $_GET["error"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,7 +95,7 @@
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Entrez votre mot de passe</div>
                     </div>
-
+                    <p class="text-danger"><?=$error?></p>
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit">Créer </button>
                     </div>

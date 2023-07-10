@@ -23,7 +23,15 @@ class Utilisateur extends CI_Controller{
             $prenom = (string)$_POST['prenom'];
             $email = (string)$_POST['email']; 
             $mdp =(string) $_POST['password'];
-            $this->utilisateurm->inscrire($nom, $prenom, $email, $mdp);
+            $user = $this->utilisateurm->check_user($email);
+            if (count($user)>0) {
+                redirect("utilisateur/inscription?error=Cet email possède déjà un compte");
+            }
+            else {
+                $this->utilisateurm->inscrire($nom, $prenom, $email, $mdp);
+                redirect("utilisateur/");
+                # code...
+            }
         }
     }
 
@@ -41,6 +49,10 @@ class Utilisateur extends CI_Controller{
         $user = $this->utilisateurm->login($email,$mdp);
         if(count($user)<1){
             redirect("utilisateur/index?error=utilisateur non trouvé");
+        }
+        else {
+            redirect("welcome/");
+            # code...
         }
         //TODO
     }

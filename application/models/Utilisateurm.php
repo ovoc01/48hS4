@@ -21,5 +21,6 @@ class Utilisateurm extends CI_Model{
     public function check_user($email){
         $sql = "select * from user where email = '".$email."'";
         $query = $this->db->query($sql);
+        return $query->result_array();
     }
 }
