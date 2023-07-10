@@ -19,7 +19,7 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="users-profile.html">
-                <i class="bi bi-person"></i>
+                <i class="bi bi-cash-coin"></i>
                 <span>Mon portefeuille</span>
             </a>
         </li><!-- End Profile Page Nav -->
