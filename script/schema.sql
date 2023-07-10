@@ -62,8 +62,6 @@ CREATE TABLE regime(
     intitule VARCHAR(30),
     duree int,
     prix DOUBLE PRECISION,
-    gain DOUBLE PRECISION,
-    perte DOUBLE PRECISION
 );
 
 CREATE TABLE code(

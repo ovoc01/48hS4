@@ -15,4 +15,48 @@ class Admin extends CI_Controller{
     public function home(){
      $this->load->view('admin/home');
     }
+
+    public function statistique(){
+     $this->load->view('admin/statistique');
+    }
+
+    public function validation_codes(){
+
+    }
+
+    public function regime_list(){
+
+    }
+
+    public function new_regime(){
+
+    }
+
+    public function plat_list(){
+
+    }
+
+     public function new_plat(){
+     
+     }
+
+     public function activity_list(){
+
+     }
+
+     public function new_activity(){
+
+     }
+
+     public function code_list(){
+
+     }
+
+     public function new_code(){
+
+     }
+
+     public function logout(){
+          
+     }  
  } 
