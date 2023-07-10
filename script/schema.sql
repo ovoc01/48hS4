@@ -1,3 +1,6 @@
+create database projet48hS4;
+\c projet48hS4;
+
 CREATE TABLE user (
     idUtilisateur int PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(30) DEFAULT NULL,
