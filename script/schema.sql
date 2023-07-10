@@ -20,5 +20,6 @@ CREATE TABLE infoUtilisateur (
     idUtilisateur int REFERENCES user(idUtilisateur),
     idGenre int REFERENCES genre(idGenre),
     taille DOUBLE PRECISION,
-    poids DOUBLE PRECISION
+    poids DOUBLE PRECISION,
+    dateNaissance DATE 
 );
