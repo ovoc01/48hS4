@@ -20,3 +20,7 @@ CREATE TABLE user (
     -- L'utilisateur ne possède pas de compte (valeur: -10)
     -- L'utilisateur possède un compte sans informations (valeur: 5)
     -- Le compte de cet utilisateur a des informations et peut accéder au site (valeur: 10)
+
+CREATE TABLE infoUser(
+    idInfo int PRIMARY key
+);
