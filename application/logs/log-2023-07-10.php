@@ -210,3 +210,104 @@ INFO - 2023-07-10 05:49:21 --> Controller Class Initialized
 INFO - 2023-07-10 05:49:21 --> File loaded: /Applications/MAMP/htdocs/48hS4/application/views/sign/login.php
 INFO - 2023-07-10 05:49:21 --> Final output sent to browser
 DEBUG - 2023-07-10 05:49:21 --> Total execution time: 0.0361
+INFO - 2023-07-10 06:13:54 --> Config Class Initialized
+INFO - 2023-07-10 06:13:54 --> Hooks Class Initialized
+DEBUG - 2023-07-10 06:13:54 --> UTF-8 Support Enabled
+INFO - 2023-07-10 06:13:54 --> Utf8 Class Initialized
+INFO - 2023-07-10 06:13:54 --> URI Class Initialized
+DEBUG - 2023-07-10 06:13:54 --> No URI present. Default controller set.
+INFO - 2023-07-10 06:13:54 --> Router Class Initialized
+INFO - 2023-07-10 06:13:54 --> Output Class Initialized
+INFO - 2023-07-10 06:13:54 --> Security Class Initialized
+DEBUG - 2023-07-10 06:13:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2023-07-10 06:13:54 --> Input Class Initialized
+INFO - 2023-07-10 06:13:54 --> Language Class Initialized
+INFO - 2023-07-10 06:13:54 --> Loader Class Initialized
+INFO - 2023-07-10 06:13:54 --> Helper loaded: url_helper
+INFO - 2023-07-10 06:13:54 --> Helper loaded: file_helper
+INFO - 2023-07-10 06:13:54 --> Database Driver Class Initialized
+INFO - 2023-07-10 06:13:54 --> Session: Class initialized using 'files' driver.
+INFO - 2023-07-10 06:13:54 --> Controller Class Initialized
+INFO - 2023-07-10 06:13:54 --> File loaded: /Applications/MAMP/htdocs/48hS4/application/views/sign/login.php
+INFO - 2023-07-10 06:13:54 --> Final output sent to browser
+DEBUG - 2023-07-10 06:13:54 --> Total execution time: 0.0468
+INFO - 2023-07-10 06:13:55 --> Config Class Initialized
+INFO - 2023-07-10 06:13:55 --> Hooks Class Initialized
+DEBUG - 2023-07-10 06:13:55 --> UTF-8 Support Enabled
+INFO - 2023-07-10 06:13:55 --> Utf8 Class Initialized
+INFO - 2023-07-10 06:13:55 --> URI Class Initialized
+INFO - 2023-07-10 06:13:55 --> Router Class Initialized
+INFO - 2023-07-10 06:13:55 --> Output Class Initialized
+INFO - 2023-07-10 06:13:55 --> Security Class Initialized
+DEBUG - 2023-07-10 06:13:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2023-07-10 06:13:55 --> Input Class Initialized
+INFO - 2023-07-10 06:13:55 --> Language Class Initialized
+INFO - 2023-07-10 06:13:55 --> Loader Class Initialized
+INFO - 2023-07-10 06:13:55 --> Helper loaded: url_helper
+INFO - 2023-07-10 06:13:55 --> Helper loaded: file_helper
+INFO - 2023-07-10 06:13:55 --> Database Driver Class Initialized
+INFO - 2023-07-10 06:13:55 --> Session: Class initialized using 'files' driver.
+INFO - 2023-07-10 06:13:55 --> Controller Class Initialized
+INFO - 2023-07-10 06:13:55 --> File loaded: /Applications/MAMP/htdocs/48hS4/application/views/sign/inscription.php
+INFO - 2023-07-10 06:13:55 --> Final output sent to browser
+DEBUG - 2023-07-10 06:13:55 --> Total execution time: 0.0379
+INFO - 2023-07-10 06:20:42 --> Config Class Initialized
+INFO - 2023-07-10 06:20:42 --> Hooks Class Initialized
+DEBUG - 2023-07-10 06:20:42 --> UTF-8 Support Enabled
+INFO - 2023-07-10 06:20:42 --> Utf8 Class Initialized
+INFO - 2023-07-10 06:20:42 --> URI Class Initialized
+INFO - 2023-07-10 06:20:42 --> Router Class Initialized
+INFO - 2023-07-10 06:20:42 --> Output Class Initialized
+INFO - 2023-07-10 06:20:42 --> Security Class Initialized
+DEBUG - 2023-07-10 06:20:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2023-07-10 06:20:42 --> Input Class Initialized
+INFO - 2023-07-10 06:20:42 --> Language Class Initialized
+INFO - 2023-07-10 06:20:42 --> Loader Class Initialized
+INFO - 2023-07-10 06:20:42 --> Helper loaded: url_helper
+INFO - 2023-07-10 06:20:42 --> Helper loaded: file_helper
+INFO - 2023-07-10 06:20:42 --> Database Driver Class Initialized
+INFO - 2023-07-10 06:20:42 --> Session: Class initialized using 'files' driver.
+INFO - 2023-07-10 06:20:42 --> Controller Class Initialized
+INFO - 2023-07-10 06:20:42 --> File loaded: /Applications/MAMP/htdocs/48hS4/application/views/sign/inscription.php
+INFO - 2023-07-10 06:20:42 --> Final output sent to browser
+DEBUG - 2023-07-10 06:20:42 --> Total execution time: 0.0375
+INFO - 2023-07-10 06:20:44 --> Config Class Initialized
+INFO - 2023-07-10 06:20:44 --> Hooks Class Initialized
+DEBUG - 2023-07-10 06:20:44 --> UTF-8 Support Enabled
+INFO - 2023-07-10 06:20:44 --> Utf8 Class Initialized
+INFO - 2023-07-10 06:20:44 --> URI Class Initialized
+INFO - 2023-07-10 06:20:44 --> Router Class Initialized
+INFO - 2023-07-10 06:20:44 --> Output Class Initialized
+INFO - 2023-07-10 06:20:44 --> Security Class Initialized
+DEBUG - 2023-07-10 06:20:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2023-07-10 06:20:44 --> Input Class Initialized
+INFO - 2023-07-10 06:20:44 --> Language Class Initialized
+INFO - 2023-07-10 06:20:44 --> Loader Class Initialized
+INFO - 2023-07-10 06:20:44 --> Helper loaded: url_helper
+INFO - 2023-07-10 06:20:44 --> Helper loaded: file_helper
+INFO - 2023-07-10 06:20:44 --> Database Driver Class Initialized
+INFO - 2023-07-10 06:20:44 --> Session: Class initialized using 'files' driver.
+INFO - 2023-07-10 06:20:44 --> Controller Class Initialized
+INFO - 2023-07-10 06:20:44 --> File loaded: /Applications/MAMP/htdocs/48hS4/application/views/sign/login.php
+INFO - 2023-07-10 06:20:44 --> Final output sent to browser
+DEBUG - 2023-07-10 06:20:44 --> Total execution time: 0.0375
+INFO - 2023-07-10 06:20:46 --> Config Class Initialized
+INFO - 2023-07-10 06:20:46 --> Hooks Class Initialized
+DEBUG - 2023-07-10 06:20:46 --> UTF-8 Support Enabled
+INFO - 2023-07-10 06:20:46 --> Utf8 Class Initialized
+INFO - 2023-07-10 06:20:46 --> URI Class Initialized
+INFO - 2023-07-10 06:20:46 --> Router Class Initialized
+INFO - 2023-07-10 06:20:46 --> Output Class Initialized
+INFO - 2023-07-10 06:20:46 --> Security Class Initialized
+DEBUG - 2023-07-10 06:20:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2023-07-10 06:20:46 --> Input Class Initialized
+INFO - 2023-07-10 06:20:46 --> Language Class Initialized
+INFO - 2023-07-10 06:20:46 --> Loader Class Initialized
+INFO - 2023-07-10 06:20:46 --> Helper loaded: url_helper
+INFO - 2023-07-10 06:20:46 --> Helper loaded: file_helper
+INFO - 2023-07-10 06:20:46 --> Database Driver Class Initialized
+INFO - 2023-07-10 06:20:46 --> Session: Class initialized using 'files' driver.
+INFO - 2023-07-10 06:20:46 --> Controller Class Initialized
+INFO - 2023-07-10 06:20:46 --> File loaded: /Applications/MAMP/htdocs/48hS4/application/views/sign/inscription.php
+INFO - 2023-07-10 06:20:46 --> Final output sent to browser
+DEBUG - 2023-07-10 06:20:46 --> Total execution time: 0.0396
