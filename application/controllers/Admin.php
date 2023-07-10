@@ -12,4 +12,7 @@ class Admin extends CI_Controller{
          $this->load->view('sign/login_admin');
     }
 
+    public function home(){
+     $this->load->view('admin/home');
+    }
  } 
