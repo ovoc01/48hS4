@@ -106,3 +106,23 @@ INFO - 2023-07-10 04:52:51 --> Database Driver Class Initialized
 ERROR - 2023-07-10 04:52:51 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) /Applications/MAMP/htdocs/48hS4/system/database/drivers/mysqli/mysqli_driver.php 202
 ERROR - 2023-07-10 04:52:51 --> Unable to connect to the database
 INFO - 2023-07-10 04:52:51 --> Language file loaded: language/french/db_lang.php
+INFO - 2023-07-10 05:33:11 --> Config Class Initialized
+INFO - 2023-07-10 05:33:11 --> Hooks Class Initialized
+DEBUG - 2023-07-10 05:33:11 --> UTF-8 Support Enabled
+INFO - 2023-07-10 05:33:11 --> Utf8 Class Initialized
+INFO - 2023-07-10 05:33:11 --> URI Class Initialized
+DEBUG - 2023-07-10 05:33:11 --> No URI present. Default controller set.
+INFO - 2023-07-10 05:33:11 --> Router Class Initialized
+INFO - 2023-07-10 05:33:11 --> Output Class Initialized
+INFO - 2023-07-10 05:33:11 --> Security Class Initialized
+DEBUG - 2023-07-10 05:33:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2023-07-10 05:33:11 --> Input Class Initialized
+INFO - 2023-07-10 05:33:11 --> Language Class Initialized
+INFO - 2023-07-10 05:33:11 --> Loader Class Initialized
+INFO - 2023-07-10 05:33:11 --> Helper loaded: url_helper
+INFO - 2023-07-10 05:33:11 --> Helper loaded: file_helper
+INFO - 2023-07-10 05:33:11 --> Database Driver Class Initialized
+INFO - 2023-07-10 05:33:11 --> Session: Class initialized using 'files' driver.
+INFO - 2023-07-10 05:33:11 --> Controller Class Initialized
+INFO - 2023-07-10 05:33:11 --> Final output sent to browser
+DEBUG - 2023-07-10 05:33:11 --> Total execution time: 0.0338
