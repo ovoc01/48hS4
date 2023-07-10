@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+  $error = "";
+  if(isset($_GET["error"])){
+    $error = $_GET["error"];
+  }
+?>
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -64,13 +70,13 @@
                     <p class="text-center small">Entrez votre email et votre mot de passe</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form method="POST" action="<?=base_url("utilisateur/login")?>" class="row g-3 needs-validation" novalidate>
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Email</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
+                        <input type="text" name="email" class="form-control" id="yourUsername" required>
                         <div class="invalid-feedback">Entrez votre email.</div>
                       </div>
                     </div>
@@ -80,7 +86,7 @@
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Entrez votre mot de passe</div>
                     </div>
-
+                     <p class="text-danger"><?=$error?></p>
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit">Connection</button>
                     </div>
