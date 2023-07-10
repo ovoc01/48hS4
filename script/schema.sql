@@ -50,6 +50,13 @@ CREATE TABLE activites(
     perte DOUBLE PRECISION
 );
 
+CREATE TABLE plat(
+    idPlat int PRIMARY KEY AUTO_INCREMENT,
+    intitule VARCHAR(15),
+    gain DOUBLE PRECISION,
+    perte DOUBLE PRECISION
+);
+
 CREATE TABLE regime(
     idRegime int PRIMARY KEY AUTO_INCREMENT,
     intitule VARCHAR(30),
