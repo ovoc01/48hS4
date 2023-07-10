@@ -64,16 +64,16 @@
                     <p class="text-center small">Entrez votre email et mot de passe</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form method="POST" action="<?=base_url("utilisateur/inscription_utilisateur")?>" class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
                       <label for="yourName" class="form-label">Votre nom</label>
-                      <input type="text" name="name" class="form-control" id="yourName" required>
+                      <input type="text" name="nom" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Entrez votre nom</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourName" class="form-label">Votre prenom</label>
-                      <input type="text" name="name" class="form-control" id="yourName" required>
+                      <input type="text" name="prenom" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Entrez votre prenom</div>
                     </div>
 

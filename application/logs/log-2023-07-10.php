@@ -827,6 +827,7 @@ DEBUG - 2023-07-10 07:16:48 --> Global POST, GET and COOKIE data sanitized
 INFO - 2023-07-10 07:16:48 --> Input Class Initialized
 INFO - 2023-07-10 07:16:48 --> Language Class Initialized
 ERROR - 2023-07-10 07:16:48 --> 404 Page Not Found: Utilisateur/assets
+<<<<<<< Updated upstream
 INFO - 2023-07-10 09:37:06 --> Config Class Initialized
 INFO - 2023-07-10 09:37:06 --> Hooks Class Initialized
 DEBUG - 2023-07-10 09:37:06 --> UTF-8 Support Enabled
@@ -1006,3 +1007,6 @@ INFO - 2023-07-10 09:40:50 --> File loaded: /Applications/MAMP/htdocs/48hS4/appl
 INFO - 2023-07-10 09:40:50 --> File loaded: /Applications/MAMP/htdocs/48hS4/application/views/user/home.php
 INFO - 2023-07-10 09:40:50 --> Final output sent to browser
 DEBUG - 2023-07-10 09:40:50 --> Total execution time: 0.0386
+=======
+ERROR - 2023-07-10 11:46:47 --> Severity: Warning --> date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. C:\UwAmp\www\48hS4\system\core\Log.php 176
+>>>>>>> Stashed changes

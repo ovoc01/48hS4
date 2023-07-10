@@ -11,13 +11,24 @@ class Utilisateur extends CI_Controller{
 
     public function index()
     {
-        
        $this->load->view('sign/login');
     }
 
+    public function inscription_utilisateur(){
+        if(!isset($_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['password'])){
+            redirect("utilisateur/");
+        }
+        else {
+            $nom = (string)$_POST['nom'];
+            $prenom = (string)$_POST['prenom'];
+            $email = (string)$_POST['email']; 
+            $mdp =(string) $_POST['password'];
+            $this->utilisateurm->inscrire($nom, $prenom, $email, $mdp);
+        }
+    }
 
     public function inscription(){
-        $this->load->view('sign/inscription');
+        $this->load->view("sign/inscription");
     }
 
 
