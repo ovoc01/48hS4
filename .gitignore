@@ -1,4 +1,2 @@
-system/
-application/config/
-application/database/
-application/logs/
+system/*
+application/config/*
