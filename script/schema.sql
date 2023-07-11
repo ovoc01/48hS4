@@ -71,3 +71,20 @@ CREATE TABLE code(
     status int DEFAULT 0
 );
 
+create table objectif(
+    idObjectif int PRIMARY KEY AUTO_INCREMENT,
+    intitule VARCHAR(30) not null,
+);
+
+create table categorie(
+    idCategorie int PRIMARY KEY AUTO_INCREMENT,
+    intitule VARCHAR(30) not null,
+);
+
+create table user_objectif(
+    idUserObjectif int PRIMARY KEY AUTO_INCREMENT,
+    idUtilisateur int REFERENCES user(idUtilisateur),
+    idObjectif int REFERENCES objectif(idObjectif),
+    idCategorie int REFERENCES categorie(idCategorie),
+    status int DEFAULT 0
+);

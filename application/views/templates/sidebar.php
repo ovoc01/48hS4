@@ -22,7 +22,7 @@
                 <span>Profile</span>
             </a>
         </li>
-
+        
         <li class="nav-item">
             <a class="nav-link collapsed" href="users-profile.html">
                 <i class="bi bi-cash-coin"></i>
@@ -31,10 +31,16 @@
         </li>
         <li class="nav-item">
             <a class="nav-link collapsed" href="users-profile.html">
+                <i class="bi bi-card-checklist"></i>
+                <span>Information </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="users-profile.html">
                 <i class="bi bi-door-open"></i>
                 <span>Déconnectez</span>
             </a>
-        </li><!-- End Profile Page Nav -->
+        </li>
     </ul>
 
 </aside><!-- End Sidebar-->
