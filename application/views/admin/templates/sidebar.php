@@ -79,7 +79,7 @@
         </a>
         <ul id="code-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
+            <a href="<?=base_url("code/new_code")?>">
               <i class="bi bi-circle"></i><span>Nouveau</span>
             </a>
           </li>

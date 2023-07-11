@@ -30,7 +30,7 @@
                                 <td><?=$code['intitule']?></td>
                                 <td><?=$code['usage_count']?></td>
                                 <td>
-                                    <button class="btn btn-primary">Expirez</button>
+                                   <a href="<?=base_url("")?>"><button class="btn btn-primary">Expirez</button></a> 
                                 </td>
                             </tr>
                     <?php } ?>

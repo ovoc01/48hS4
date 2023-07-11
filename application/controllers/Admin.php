@@ -54,13 +54,7 @@ class Admin extends CI_Controller{
 
      }
 
-     public function code_list(){
-
-     }
-
-     public function new_code(){
-
-     }
+    
 
      public function logout(){
           
