@@ -80,4 +80,5 @@
         <script src="<?=base_url()?>assets/js/main.js"></script>
 <?php
     $this->load->view("templates/footer.php");
+
 ?>

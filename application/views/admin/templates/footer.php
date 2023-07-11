@@ -1,3 +1,4 @@
+
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
     <div class="copyright">
@@ -21,5 +22,4 @@
 <script src="<?=base_url()?>assets/js/main.js"></script>
 <script src="<?=base_url()?>assets/js/dashboard.js"></script>
 </body>
-
 </html>
