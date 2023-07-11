@@ -90,3 +90,11 @@ create table user_objectif(
     dateDebut DATE,
     status int DEFAULT 0
 );
+
+create table user_transaction(
+    idUserTransaction int PRIMARY KEY AUTO_INCREMENT,
+    idUtilisateur int REFERENCES user(idUtilisateur),
+    montant DOUBLE PRECISION,
+    status int DEFAULT 0
+    date DATE,
+);

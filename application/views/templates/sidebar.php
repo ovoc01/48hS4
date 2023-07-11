@@ -22,9 +22,9 @@
                 <span>Profile</span>
             </a>
         </li>
-        
+
         <li class="nav-item">
-            <a class="nav-link collapsed" href="users-profile.html">
+            <a class="nav-link collapsed" href="<?=base_url("money/")?>">
                 <i class="bi bi-cash-coin"></i>
                 <span>Mon portefeuille</span>
             </a>

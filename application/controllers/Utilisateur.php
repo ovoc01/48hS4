@@ -51,6 +51,7 @@ class Utilisateur extends CI_Controller{
             redirect("utilisateur/index?error=utilisateur non trouvé");
         }
         else {
+            $this->session->set_userdata('user', $user[0]);
             redirect("welcome/");
             # code...
         }
