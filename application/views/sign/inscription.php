@@ -70,7 +70,7 @@
                     <p class="text-center small">Entrez votre email et mot de passe</p>
                   </div>
 
-                  <form method="POST" action="<?=base_url("utilisateur/inscription_utilisateur")?>" class="row g-3 needs-validation" novalidate>
+                  <form method="POST" action="<?=site_url("utilisateur/inscription_utilisateur")?>" class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
                       <label for="yourName" class="form-label">Votre nom</label>
                       <input type="text" name="nom" class="form-control" id="yourName" required>
@@ -100,7 +100,7 @@
                       <button class="btn btn-primary w-100" type="submit">Créer </button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Vous avez déja un compte? <a href="<?=base_url("utilisateur/")?>">Se connecter</a></p>
+                      <p class="small mb-0">Vous avez déja un compte? <a href="<?=site_url("utilisateur/")?>">Se connecter</a></p>
                     </div>
                   </form>
 

@@ -62,8 +62,6 @@ CREATE TABLE regime(
     intitule VARCHAR(30),
     duree int,
     prix DOUBLE PRECISION,
-    gain DOUBLE PRECISION,
-    perte DOUBLE PRECISION
 );
 
 CREATE TABLE code(
@@ -73,3 +71,30 @@ CREATE TABLE code(
     status int DEFAULT 0
 );
 
+create table objectif(
+    idObjectif int PRIMARY KEY AUTO_INCREMENT,
+    intitule VARCHAR(30) not null,
+);
+
+create table categorie(
+    idCategorie int PRIMARY KEY AUTO_INCREMENT,
+    intitule VARCHAR(30) not null,
+
+);
+
+create table user_objectif(
+    idUserObjectif int PRIMARY KEY AUTO_INCREMENT,
+    idUtilisateur int REFERENCES user(idUtilisateur),
+    idObjectif int REFERENCES objectif(idObjectif),
+    idCategorie int REFERENCES categorie(idCategorie),
+    dateDebut DATE,
+    status int DEFAULT 0
+);
+
+create table user_transaction(
+    idUserTransaction int PRIMARY KEY AUTO_INCREMENT,
+    idUtilisateur int REFERENCES user(idUtilisateur),
+    montant DOUBLE PRECISION,
+    status int DEFAULT 0
+    date DATE,
+);
