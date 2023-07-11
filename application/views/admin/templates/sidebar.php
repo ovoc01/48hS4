@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="index.html">
+            <a class="nav-link collapsed" href="<?=base_url('admin/home')?>">
                 <i class="bi bi-graph-up"></i>
                 <span>Statistique</span>
             </a>
@@ -84,7 +84,7 @@
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="<?=base_url('code/list_code')?>">
               <i class="bi bi-circle"></i><span>Listes</span>
             </a>
           </li>

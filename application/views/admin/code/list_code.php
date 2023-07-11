@@ -18,20 +18,18 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">intitule</th>
-                    <th scope="col">Nombre de fois</th>
-                    <th scope="col"></th>
+                    <th scope="col">Montant(Ar)</th>
+                    <th scope="col">Status</th>
                   </tr>
                 </thead>
                 <tbody>
                     <?php
-                        foreach($code_use as $code){ ?>
+                        foreach($code_list as $code){ ?>
                             <tr>
                                 <th scope="row"><?=$code['idCode']?></th>
                                 <td><?=$code['intitule']?></td>
-                                <td><?=$code['usage_count']?></td>
-                                <td>
-                                   <a href="<?php echo base_url("code/invalidate_code?id=").$code['idCode']?>"><button class="btn btn-primary">Expirez</button></a> 
-                                </td>
+                                <td><?=$code['montant']?></td>
+                                <td><?=$code['status']?></td>
                             </tr>
                     <?php } ?>
                 </tbody>

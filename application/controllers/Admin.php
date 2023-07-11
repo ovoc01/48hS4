@@ -39,7 +39,7 @@ class Admin extends CI_Controller{
     }
 
     public function plat_list(){
-
+        
     }
 
      public function new_plat(){

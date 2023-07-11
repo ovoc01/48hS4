@@ -26,7 +26,7 @@ class Money extends CI_Controller{
         $user = $this->session->userdata('user');
         $ocde_validity = $this->moneym->check_code($code);
         if(count( $ocde_validity)<1){
-           redirect(("money/index?error=code invalide ou n'existe pas"));
+           redirect(("money/index?error=code invalide ou n'existe pas ou a été déja utilisée"));
         }
         $this->moneym->insert_code($ocde_validity[0]['idCode'],$ocde_validity[0]['montant'], $user['idUtilisateur']);
         redirect(base_url("money/"));

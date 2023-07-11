@@ -26,4 +26,31 @@ class Code extends CI_Controller{
         $success = "code ajouté avec succès";
         redirect('code/new_code?success='.$success);
      }
+
+     public function invalidate_code(){
+        $id = $this->input->get('id');
+        if($id==null){
+            redirect(('admin/validation_codes'));
+        }
+        $this->codem->invalidate_code($id);
+        redirect('admin/validation_codes');
+     }
+
+     public function list_code(){
+        $code_list = $this->codem->get_all_code();
+        foreach($code_list as $code){
+            if($code['status']==0){
+                $code['status'] = "Non utilisé";
+            }
+            elseif($code['status']==5){
+                 $code['status'] = "Utilisé";
+            }
+            else{
+                 $code['status'] = "Code invalidé";
+            }
+        }
+        $code_list = $code_list;
+        $data['code_list'] = $code_list;
+        $this->load->view('admin/code/list_code',$data);
+     }
 }

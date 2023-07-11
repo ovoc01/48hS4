@@ -25,3 +25,7 @@ SELECT ch.idCode, c.intitule, COUNT(*) AS usage_count
 FROM code_history ch
 JOIN code c ON ch.idCode = c.idCode
 GROUP BY ch.idCode, c.intitule;
+
+
+create or replace VIEW v_usable_code AS
+select * from code where status <10

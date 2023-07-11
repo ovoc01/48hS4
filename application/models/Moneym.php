@@ -38,7 +38,7 @@ class Moneym extends CI_Model{
     
 
     public function check_code($code){
-        $sql = "select * from code where intitule = '".$code."'";
+        $sql = "select * from v_usable_code where intitule = '".$code."'";
         $query = $this->db->query($sql);
         return $query->result_array();
     }
@@ -60,7 +60,7 @@ class Moneym extends CI_Model{
     }
 
     public function get_code_use_liste(){
-        $sql = "select * from v_code_usage_count";
+        $sql = "select * from v_code_usage_count where idCode  in(select idCode from v_usable_code)";
         $query = $this->db->query($sql);
         return $query->result_array();
     }
