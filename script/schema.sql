@@ -79,6 +79,7 @@ create table objectif(
 create table categorie(
     idCategorie int PRIMARY KEY AUTO_INCREMENT,
     intitule VARCHAR(30) not null,
+
 );
 
 create table user_objectif(
@@ -86,5 +87,6 @@ create table user_objectif(
     idUtilisateur int REFERENCES user(idUtilisateur),
     idObjectif int REFERENCES objectif(idObjectif),
     idCategorie int REFERENCES categorie(idCategorie),
+    dateDebut DATE,
     status int DEFAULT 0
 );
