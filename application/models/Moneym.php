@@ -6,7 +6,6 @@ class Moneym extends CI_Model{
         parent::__construct();
     }
 
-   //creae a function to insert transaction and have as parameter the user id and th code id an it will insert the value of the code in the transaction table and there is status column in the table 0 corresponding to the money entered and 1 corresponding to the money out and there is a date column in the table
  public function insert_code($idCode, $montant, $idUtilisateur) {
     $this->db->trans_start(); // Start the transaction
 
@@ -19,12 +18,21 @@ class Moneym extends CI_Model{
     $this->db->where('idCode', $idCode);
     $this->db->update('code');
 
+    // Insert into code_history
+    $data = array(
+        'idUtilisateur' => $idUtilisateur,
+        'idCode' => $idCode,
+        'date' => date('Y-m-d')
+    );
+    $this->db->insert('code_history', $data);
+
     $this->db->trans_complete(); // Complete the transaction
 
     if ($this->db->trans_status() === FALSE) {
         echo "Error";
     }
 }
+
 
     
     
@@ -47,6 +55,12 @@ class Moneym extends CI_Model{
 
     public function get_user_solde($idUtilisateur){
         $sql = "select * from v_user_balance where user_id = '".$idUtilisateur."'";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
+    public function get_code_use_liste(){
+        $sql = "select * from v_code_usage_count";
         $query = $this->db->query($sql);
         return $query->result_array();
     }

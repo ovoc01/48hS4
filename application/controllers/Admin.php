@@ -5,6 +5,8 @@ class Admin extends CI_Controller{
      public function __construct()
     {
         parent::__construct();
+            $this->load->model('utilisateurm');
+            $this->load->model('moneym');
     }
 
 
@@ -13,7 +15,9 @@ class Admin extends CI_Controller{
     }
 
     public function home(){
-     $this->load->view('admin/home');
+    $user_list = $this->utilisateurm->user_list();
+    $data['user_list_nbr'] = count($user_list);
+     $this->load->view('admin/home', $data);
     }
 
     public function statistique(){
@@ -21,7 +25,9 @@ class Admin extends CI_Controller{
     }
 
     public function validation_codes(){
-
+        $code_use = $this->moneym->get_code_use_liste();
+        $data['code_use'] = $code_use;
+        $this->load->view('admin/code/validation_code',$data);
     }
 
     public function regime_list(){

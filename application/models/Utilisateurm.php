@@ -23,4 +23,11 @@ class Utilisateurm extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result_array();
     }
+
+    public function user_list(){
+        $sql = "select * from v_utilisateur_valide";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
 }

@@ -98,3 +98,10 @@ create table user_transaction(
     status int DEFAULT 0
     date DATE,
 );
+
+create table code_history(
+    idCodeHistory int PRIMARY KEY AUTO_INCREMENT,
+    idUtilisateur int REFERENCES user(idUtilisateur),
+    idCode int REFERENCES code(idCode),
+    date DATE,
+);

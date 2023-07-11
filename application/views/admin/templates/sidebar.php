@@ -11,7 +11,7 @@
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="users-profile.html">
+            <a class="nav-link collapsed" href="<?=base_url('admin/validation_codes')?>">
                 <i class="bi bi-card-checklist"></i>
                 <span>Validations codes</span>
             </a>

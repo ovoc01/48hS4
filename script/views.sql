@@ -18,3 +18,10 @@ FROM (
     SELECT sortie_user_id, -amount FROM v_transation_sortie
 ) AS t
 GROUP BY t.entrant_user_id;
+
+
+CREATE OR REPLACE VIEW v_code_usage_count AS
+SELECT ch.idCode, c.intitule, COUNT(*) AS usage_count
+FROM code_history ch
+JOIN code c ON ch.idCode = c.idCode
+GROUP BY ch.idCode, c.intitule;
